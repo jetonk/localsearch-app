@@ -1,6 +1,6 @@
-import Places from "pages/places";
-import PlaceDetails from "pages/place-details";
-import ErrorPage from "pages/error-page";
+import Places from "pages/Places";
+import PlaceDetails from "pages/PlaceDetails";
+import ErrorPage from "pages/ErrorPage";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
