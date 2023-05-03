@@ -10,6 +10,8 @@ import { debounce } from "utils/debounce";
 
 import "./styles.css";
 
+const DELAY_SEARCH_MS = 500;
+
 export default function Places() {
   const [places, setPlaces] = useState([]);
   const [allPlaces, setAllPlaces] = useState([]);
@@ -57,7 +59,7 @@ export default function Places() {
 
   const handleSearch = debounce((value) => {
     setSearch(value);
-  }, 500);
+  }, DELAY_SEARCH_MS);
 
   if (error) {
     return <ErrorMessage error={error} />;

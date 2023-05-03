@@ -1,4 +1,8 @@
 .columnDays {
   display: flex;
   flex-direction: column;
+  text-transform: capitalize;
+}
+.dayLabel {
+  text-transform: capitalize;
 }

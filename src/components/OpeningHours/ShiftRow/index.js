@@ -3,8 +3,9 @@ import { Days } from "components/OpeningHours/Days";
 import { PropTypes } from "prop-types";
 
 export const ShiftRow = ({ shift }) => {
-  const firstShift = shift.firstShift || "";
-  const secondShift = shift.secondShift || "";
+  const firstShift = shift.firstShift;
+  const secondShift = shift.secondShift;
+
   return (
     <Box className="rowContainer">
       <Days shift={shift} />

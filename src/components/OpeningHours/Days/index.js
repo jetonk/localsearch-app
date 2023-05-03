@@ -3,24 +3,29 @@ import { PropTypes } from "prop-types";
 import "./styles.css";
 
 export const Days = ({ shift }) => {
-  if (shift.days.length > 2) {
-    const firstDay = shift.days[0];
-    const lastDay = shift.days[shift.days.length - 1];
+  const days = shift.days;
+
+  if (days.length > 2) {
+    const firstDay = days[0];
+    const lastDay = days[days.length - 1];
     return (
       <Box>
-        {firstDay} - {lastDay}
+        <label className="dayLabel">{firstDay}</label>
+        {" - "}
+        <label className="dayLabel">{lastDay}</label>
       </Box>
     );
   }
+
   return (
     <Box className="columnDays">
-      {shift.days.map((day) => {
-        console.log("day", day);
+      {days.map((day) => {
         return <Box key={day}>{day}</Box>;
       })}
     </Box>
   );
 };
+
 Days.propTypes = {
   shift: PropTypes.object.isRequired,
 };

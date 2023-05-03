@@ -5,7 +5,7 @@
     "module": "ESNext",
 
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
       "components": ["components"],
       "pages": ["pages"],

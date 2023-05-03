@@ -4,6 +4,7 @@ import { PropTypes } from "prop-types";
 
 export function OpeningHours({ openingHours }) {
   const shifts = Object.keys(openingHours);
+
   return (
     <>
       <Box className="title">Opening Hours</Box>
@@ -11,8 +12,7 @@ export function OpeningHours({ openingHours }) {
         <Box className="shiftContainer">
           {shifts.map((key) => {
             const shift = openingHours[key];
-            console.log("shift", shift);
-            return <ShiftRow shift={shift} />;
+            return <ShiftRow shift={shift} key={key} />;
           })}
         </Box>
       </Box>
