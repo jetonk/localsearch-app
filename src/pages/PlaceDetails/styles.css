@@ -2,3 +2,39 @@
   font-size: 18px;
   font-weight: 600;
 }
+.placeCard {
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.left {
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+
+.workingDays {
+  display: flex;
+  flex-direction: column;
+}
+
+.shiftContainer {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+}
+
+.rowContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columnDays {
+  display: flex;
+  flex-direction: column;
+}
+
+.displayShifts {
+  display: column;
+}

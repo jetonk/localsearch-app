@@ -2,11 +2,12 @@
 import { defineConfig } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react";
+import image from "@rollup/plugin-image";
 import fs from "fs/promises";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), image()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -15,6 +16,7 @@ export default defineConfig({
       services: path.resolve(__dirname, "./src/services"),
       config: path.resolve(__dirname, "./src/config"),
       utils: path.resolve(__dirname, "./src/utils"),
+      assets: path.resolve(__dirname, "./src/assets"),
     },
   },
   esbuild: {

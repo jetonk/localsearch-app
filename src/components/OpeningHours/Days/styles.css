@@ -1,0 +1,4 @@
+.columnDays {
+  display: flex;
+  flex-direction: column;
+}

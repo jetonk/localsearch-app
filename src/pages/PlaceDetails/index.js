@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Container, Grid, Card, Box } from "@mui/material";
+import { Header } from "components/Header/index";
 import { PlaceDetailsRow } from "components/PlaceDetailsRow";
 import { Spinner } from "components/Spinner/index";
-import { ErrorMessage } from "components/ErrorMessage/index";
+import { ErrorMessage } from "components/ErrorMessage";
+import { OpeningHours } from "components/OpeningHours";
 import { getPlaceById } from "services/placesApi";
 import { useParams } from "react-router-dom";
 
@@ -36,21 +38,29 @@ export default function PlaceDetails() {
   if (error) {
     return <ErrorMessage error={error} />;
   }
+  const shifts = Object.keys(place.opening_hours);
+  const { opening_hours } = place;
 
   return (
     <Container>
-      <Card sx={{ padding: "15px" }}>
+      <Header />
+      <Card className="placeCard">
         <Box className="title">{place.displayed_what}</Box>
         <Grid container>
-          <PlaceDetailsRow label="Address" value={place.displayed_where} />
-          <PlaceDetailsRow
-            label={place.contacts.phone.label}
-            value={place.contacts.phone.value}
-          />
-          <PlaceDetailsRow
-            label={place.contacts.url.label}
-            value={place.contacts.url.value}
-          />
+          <Box className="left">
+            <PlaceDetailsRow label="Address" value={place.displayed_where} />
+            <PlaceDetailsRow
+              label={place.contacts.url.label}
+              value={place.contacts.url.value}
+            />
+            <PlaceDetailsRow
+              label={place.contacts.phone.label}
+              value={place.contacts.phone.value}
+            />
+          </Box>
+          <Box className="right">
+            <OpeningHours openingHours={opening_hours} />
+          </Box>
         </Grid>
       </Card>
     </Container>

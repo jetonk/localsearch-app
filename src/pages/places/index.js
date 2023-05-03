@@ -3,10 +3,11 @@ import { Container, Grid, Card, CardContent } from "@mui/material";
 import { Spinner } from "components/Spinner/index";
 import { SearchBar } from "components/SearchBar";
 import { ErrorMessage } from "components/ErrorMessage/index";
-
+import { Header } from "components/Header/index";
 import { getPlaces, searchPlaces } from "services/placesApi";
 import { useNavigate } from "react-router-dom";
 import { debounce } from "utils/debounce";
+
 import "./styles.css";
 
 export default function Places() {
@@ -64,6 +65,7 @@ export default function Places() {
 
   return (
     <Container>
+      <Header />
       <Grid container spacing={2}>
         <Grid item xs={12} className="searchBarGrid">
           <SearchBar handleSearch={handleSearch} />
