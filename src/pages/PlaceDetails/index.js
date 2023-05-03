@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Grid, Card, Box } from "@mui/material";
 import { Header } from "components/Header/index";
 import { PlaceDetailsRow } from "components/PlaceDetailsRow";
-import { HyperLink } from "components/HyperLink";
+import { PlaceDetailsLink } from "components/PlaceDetailsLink";
 import { Spinner } from "components/Spinner/index";
 import { ErrorMessage } from "components/ErrorMessage";
 import { OpeningHours } from "components/OpeningHours";
@@ -50,7 +50,7 @@ export default function PlaceDetails() {
         <Grid container>
           <Box className="left">
             <PlaceDetailsRow label="Address" value={place.displayed_where} />
-            <HyperLink contacts={contacts} />
+            <PlaceDetailsLink contacts={contacts} />
           </Box>
           <Box className="right">
             <OpeningHours openingHours={opening_hours} />

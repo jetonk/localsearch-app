@@ -1,6 +1,5 @@
 import { PropTypes } from "prop-types";
 import { Grid, Box } from "@mui/material";
-import { HyperLink } from "components/HyperLink";
 import "./styles.css";
 
 export function PlaceDetailsRow({ label, value }) {
