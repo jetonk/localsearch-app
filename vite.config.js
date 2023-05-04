@@ -8,6 +8,9 @@ import fs from "fs/promises";
 export default defineConfig({
   plugins: [react()],
   resolve: {
+    preserveSymlinks: true,
+  },
+  resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
       pages: path.resolve(__dirname, "./src/pages"),
