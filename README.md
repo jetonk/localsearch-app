@@ -17,3 +17,8 @@
 - React
 - Axios
 - React Router DOM
+
+### How to build and run the APP using Docker
+
+- docker build -t localsearch-app .
+- docker run -p 5000:5000 localsearch-app
