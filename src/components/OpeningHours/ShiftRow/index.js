@@ -2,9 +2,9 @@ import { Grid, Box } from "@mui/material";
 import { Days } from "components/OpeningHours/Days";
 import { PropTypes } from "prop-types";
 
-export const ShiftRow = ({ shift }) => {
-  const firstShift = shift.firstShift;
-  const secondShift = shift.secondShift;
+export const ShiftRow = ({ shift, shiftGroup }) => {
+  const firstShift = shiftGroup === "closed" ? "closed" : shift.firstShift;
+  const secondShift = shiftGroup === "closed" ? "closed" : shift.secondShift;
 
   return (
     <Box className="rowContainer">

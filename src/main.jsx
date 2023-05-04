@@ -4,7 +4,6 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import { StyledEngineProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -12,7 +12,7 @@ export function OpeningHours({ openingHours }) {
         <Box className="shiftContainer">
           {shifts.map((key) => {
             const shift = openingHours[key];
-            return <ShiftRow shift={shift} key={key} />;
+            return <ShiftRow shift={shift} key={key} shiftGroup={key} />;
           })}
         </Box>
       </Box>

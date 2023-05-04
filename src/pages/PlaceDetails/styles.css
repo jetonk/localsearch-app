@@ -19,12 +19,6 @@
   flex-direction: column;
 }
 
-.shiftContainer {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
-}
-
 .rowContainer {
   display: flex;
   justify-content: space-between;

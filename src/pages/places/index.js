@@ -91,6 +91,7 @@ export default function Places() {
             </Grid>
           ))
         )}
+        {places.length === 0 && <ErrorMessage error="Results not found..." />}
       </Grid>
     </Container>
   );
