@@ -8,9 +8,6 @@ import fs from "fs/promises";
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    preserveSymlinks: true,
-  },
-  resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
       pages: path.resolve(__dirname, "./src/pages"),
@@ -20,6 +17,7 @@ export default defineConfig({
       utils: path.resolve(__dirname, "./src/utils"),
       assets: path.resolve(__dirname, "./src/assets"),
     },
+    preserveSymlinks: true,
   },
   esbuild: {
     loader: "jsx",
